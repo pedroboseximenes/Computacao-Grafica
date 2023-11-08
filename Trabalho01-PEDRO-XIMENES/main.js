@@ -130,7 +130,7 @@ class Scene {
     mat4.identity(this.mat); //gera matriz 4x4 identidade 
 
     mat4.translate(this.mat, this.mat, [0.5,0.0,0.0]); //distância de 0.5 unidades
-    
+
     this.delta += 0.01; // Delta seria o angulo para fazer a rotação
     mat4.rotateZ(this.mat, this.mat, this.delta); // rotaciona no eixo Z
     
@@ -159,7 +159,7 @@ class Scene {
     gl.uniformMatrix4fv(this.matLoc, false, this.mat);
 
     // Q3) Implemente o comando dl.drawArrays adequado para o programa em questão
-    gl.drawArrays(gl.TRIANGLES, 0, this.data.length / 4);
+    gl.drawArrays(gl.TRIANGLES, 0, (this.data.length / 5));
   }
 }
 
